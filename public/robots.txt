@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tra-gop
+Disallow: /tra-gop/*
+Disallow: /so-sanh-san-pham
+Disallow: /so-sanh-san-pham/*

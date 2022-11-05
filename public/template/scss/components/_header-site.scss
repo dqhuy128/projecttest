@@ -1,0 +1,243 @@
+.header {
+	background: #fff;
+	padding: 15px;
+	@media (min-width: 1200px) {
+		padding: 25px;
+	}
+	@media (min-width: 1680px) {
+		padding: 24px 135px;
+	}
+
+	&.header-scroll-sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 111;
+		box-shadow: #0000001a 5px 5px 10px 0px;
+	}
+
+	&-row {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.logo {
+		max-width: 142px;
+		height: auto;
+		margin-right: auto;
+		img {
+			width: 100%;
+			object-fit: scale-down;
+		}
+		@media (max-width: 1199px) and (min-width: 992px) {
+			max-width: 110px;
+		}
+		@media (max-width: 575px) {
+			max-width: 120px;
+		}
+	}
+
+	.hotline {
+		margin-left: auto;
+
+		a {
+			display: inline-block;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+			text-align: center;
+			color: #fff;
+			background: #d30008;
+			border-radius: 50px;
+			padding: 12px 34px;
+
+			@media (min-width: 1600px) {
+				min-width: 210px;
+			}
+
+			&:hover {
+				color: white;
+				background: #efad02;
+			}
+
+			@media (max-width: 1365px) {
+				padding: 10px;
+			}
+
+			@media (max-width: 1365px) and (min-width: 1200px) {
+				font-size: 14px;
+				line-height: 18px;
+			}
+
+			@media (max-width: 1199px) and (min-width: 992px) {
+				font-size: 12px;
+				line-height: 12px;
+			}
+
+			@media (max-width: 575px) {
+				font-size: 12px;
+				line-height: 16px;
+				padding: 7px 10px;
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		.menu {
+			margin: 0 auto;
+		}
+	}
+
+	@media (max-width: 991px) {
+		.menu {
+			order: 3;
+			margin-left: 15px;
+
+			.menu-hamburger-line {
+				background: white;
+			}
+		}
+	}
+
+	.menu-links {
+		&:not(:last-child) {
+			@media (min-width: 992px) {
+				margin-right: 15px;
+			}
+			@media (min-width: 1200px) {
+				margin-right: 20px;
+			}
+			@media (min-width: 1680px) {
+				margin-right: 40px;
+			}
+		}
+
+		&:last-child {
+			.menu-parent a {
+				border: 1px solid currentColor;
+				border-radius: 50px;
+				color: #d30008;
+				text-transform: unset;
+
+				&:hover {
+					background: #d30008;
+					color: #fff;
+				}
+			}
+		}
+
+		@media (min-width: 992px) {
+			&-button {
+				&:not(:last-child) {
+					@media (min-width: 992px) {
+						margin-right: 15px;
+					}
+					@media (min-width: 1200px) {
+						margin-right: 20px;
+					}
+				}
+
+				.menu-parent {
+					a {
+						display: inline-block;
+						font-weight: 600;
+						font-size: 16px;
+						line-height: 22px;
+						text-align: center;
+						color: #262626;
+						border: 1px solid #ffffff;
+						border-radius: 50px;
+						padding: 10px;
+						@media (min-width: 1680px) {
+							min-width: 165px;
+						}
+
+						@media (max-width: 1365px) and (min-width: 1200px) {
+							font-size: 14px;
+							line-height: 18px;
+						}
+
+						@media (max-width: 1199px) and (min-width: 992px) {
+							font-size: 12px;
+							line-height: 12px;
+						}
+
+						&:hover {
+							background: white;
+							color: #d30008;
+
+							&::before {
+								content: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.menu-parent {
+		&.active {
+			a {
+				&::before {
+					width: 100%;
+					transition: all 0.3s;
+				}
+				@media (max-width: 991px) {
+					color: #d30008;
+				}
+			}
+		}
+
+		a {
+			position: relative;
+			display: inline-block;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;
+			text-transform: uppercase;
+
+			&::before {
+				content: '';
+				position: absolute;
+				background: #d30008;
+				width: 0;
+				height: 2px;
+				left: 50%;
+				bottom: -5px;
+				transform: translateX(-50%);
+				transition: all 0.3s;
+			}
+
+			@media (max-width: 1365px) and (min-width: 1200px) {
+				font-size: 14px;
+				line-height: 18px;
+			}
+
+			@media (max-width: 1199px) and (min-width: 992px) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+			@media (max-width: 991px) {
+				&::before {
+					background: #d30008;
+				}
+			}
+
+			@media (min-width: 992px) {
+				color: #262626;
+
+				&:hover {
+					&::before {
+						width: 100%;
+						transition: all 0.3s;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'iCiel Nabila';
+    src: url('iCielNabila.woff2') format('woff2'),
+        url('iCielNabila.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

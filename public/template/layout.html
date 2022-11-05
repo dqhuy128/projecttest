@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>index</title>
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="home">
+	<div id="app">
+		<myheader></myheader>
+		<main>
+		</main>
+		<!-- <myfooter></myfooter> -->
+	</div>
+	<script src="js/vue.js"></script>
+	<script src="js/httpvueloader.js"></script>
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			components: {
+				myheader: httpVueLoader('vue_components/header.vue'),
+				myfooter: httpVueLoader('vue_components/footer.vue'),
+			},
+			mounted() {
+				$(window).bind('load', function () {
+
+				});
+			},
+		});
+	</script>
+</body>
+
+</html>

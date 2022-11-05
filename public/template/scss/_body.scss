@@ -1,0 +1,40 @@
+@charset "UTF-8";
+body {
+	background: #fff;
+	font-family: 'Nunito';
+	font-weight: normal;
+	font-size: 14px;
+	color: #333;
+	counter-reset: section;
+}
+
+img {
+	max-width: 100%;
+	width: auto;
+	transition: all 0.3s;
+	&:hover {
+		transition: all 0.3s;
+	}
+}
+
+a {
+	transition: all 0.3s;
+	&:hover,
+	&.active {
+		text-decoration: none;
+		transition: all 0.3s;
+	}
+}
+
+input,
+textarea,
+select {
+	&:focus {
+		outline: none;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "../scss/_fonts.scss";
+@import "../scss/bootstrap-grid",
+        "../scss/bootstrap-reboot",
+        "../scss/bootstrap";
+
+@import "../scss/reset", 
+        "../scss/variables", 
+        "../scss/body",
+        //components
+        "../scss/components/header", 
+        "../scss/components/header-site", 
+        "../scss/components/footer",
+        // pages
+        "../scss/pages/index";
